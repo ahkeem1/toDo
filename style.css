@@ -35,7 +35,7 @@ form button {
   color: mediumpurple;
   background-color: white;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.7s ease;
 }
 form button:hover {
   background: mediumpurple;
@@ -58,6 +58,7 @@ form button:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.7s ease;
 }
 .todo li {
   flex: 1;
@@ -80,4 +81,44 @@ form button:hover {
 .fa-trash,
 .fa-check {
   pointer-events: none;
+}
+.completed {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.fade {
+  transform: translate(7rem) rotateZ(35deg);
+  opacity: 0;
+}
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+}
+.select {
+  margin: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+select {
+  color: indigo;
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  background: mediumpurple;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  pointer-events: none;
+  transition: all 0.7s ease;
+}
+.select:hover::after {
+  background: white;
+  color: mediumpurple;
 }
